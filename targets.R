@@ -3,6 +3,7 @@
 #1) Thyroid Hormone Receptor-like
 NR_THR <- c("THRA", "THRB", "RARA", "RARB", "RARG", "PPARA", "PPARD", "PPARG", "NR1D1", "NR1D2", "RORA", "RORB", "RORC",
              "NR1H3", "NR1H2", "NR1H4", "NR1H5P", "VDR", "NR1I2", "NR1I3")
+#2) ...
 NR_RXR <- c("HNF4A", "HNF4G",
              "RXRA", "RXRB", "RXRG", "NR2C1", "NR2C2", "NR2E1", "NR2E3", "NR2F1", "NR2F2", "NR2F6")
 NR_ER <- c("ESR1", "ESR2", "ESRRA", "ESRRB", "ESRRG", "NR3C1", "NR3C2", "PGR", "AR")
@@ -18,6 +19,138 @@ coreg <- c("LCOR", "NCOR1", "NCOR2", "NCOA1", "NCOA2", "NCOA3", "PPARGC1A" , "NR
 wat <- c("ADIPOQ", "FABP4", "PPARG", "GLUT4", "PLIN")
 bat <- c("UCP1", "DIO2", "PPARA", "PRDM16", "ADRB3", "VEGFA2")
 targets <- c(NR, coreg, wat, bat)
+
+# targets related to lipid metabolism
+KO <- read.csv("/home/oem/KEGG/KO201221.csv", stringsAsFactors = FALSE)
+targets <- KO$gene.symbol[KO$pathway == "Fatty acid biosynthesis"]
+targets <- KO$gene.symbol[KO$pathway.code == "hsa00061"]
+hsa00061	Fatty acid biosynthesis
+hsa00062	Fatty acid elongation
+hsa00071	Fatty acid degradation
+hsa00100	Steroid biosynthesis
+hsa00120	Primary bile acid biosynthesis
+hsa00140	Steroid hormone biosynthesis
+hsa00590	Arachidonic acid metabolism
+hsa01040	Biosynthesis of unsaturated fatty acids
+
+
+#1) Fatty acid biosynthesis
+FA_Biosynthesis <- strsplit("ACACA
+ACACB
+ACSF3
+NDUFAB1
+MCAT
+FASN
+OXSM
+CBR4
+HSD17B8
+HTD2
+MECR
+OLAH
+ACSL6
+ACSL4
+ACSL1
+ACSL5
+ACSL3
+ACSBG1
+ACSBG2", split = "\n")[[1]]
+
+FA_elongation <- strsplit("ACAA2
+HADHB
+HADH
+HADHA
+ECHS1
+MECR
+PPT1
+PPT2
+ELOVL1
+ELOVL2
+ELOVL3
+ELOVL4
+ELOVL5
+ELOVL6
+ELOVL7
+HSD17B12
+HACD2
+HACD1
+HACD4
+HACD3
+TECR
+ACOT4
+ACOT2
+ACOT1
+ACOT7
+THEM4
+THEM5", split = "\n")[[1]]
+
+FA_degradation <- strsplit("ACAT2
+ACAT1
+ACAA1
+ACAA2
+HADHB
+HADH
+HADHA
+EHHADH
+ECHS1
+ACOX3
+ACOX1
+ACADS
+ACADM
+ACADL
+ACADSB
+ACADVL
+GCDH
+ACSL6
+ACSL4
+ACSL1
+ACSL5
+ACSL3
+ACSBG1
+ACSBG2
+CPT1A
+CPT1B
+CPT1C
+CPT2
+ECI1
+ECI2
+CYP4A11
+CYP4A22
+ADH1A
+ADH1B
+ADH1C
+ADH7
+ADH4
+ADH5
+ADH6
+ALDH2
+ALDH3A2
+ALDH1B1
+ALDH7A1
+ALDH9A1", split = "\n")[[1]]
+
+Stero_Biosythesis <- strsplit("FDFT1
+SQLE
+LSS
+CYP51A1
+TM7SF2
+LBR
+MSMO1
+NSDHL
+HSD17B7
+EBP
+DHCR24
+SC5D
+DHCR7
+LIPA
+CEL
+SOAT2
+SOAT1
+CYP2R1
+CYP27B1
+CYP24A1", split = "\n")[[1]]
+
+
+cytk_ligands <- strsplit("", split = "\n")[[1]]
 
 # targets from R-HSA-381340 (except PPARA, PPARD, ESR1/2)
 targets <- c("KLF4", "EGR2", "CEBPB", "CEBPD", "KLF5", "EBF1", "ZNF467", "ZNF638", "ADIRF",
