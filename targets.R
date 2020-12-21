@@ -1,4 +1,13 @@
 #### 2020-12-19 targets
+# Ref: https://en.wikipedia.org/wiki/Nuclear_receptor
+#1) Thyroid Hormone Receptor-like
+NR_THR <- c("THRA", "THRB", "RARA", "RARB", "RARG", "PPARA", "PPARD", "PPARG", "NR1D1", "NR1D2", "RORA", "RORB", "RORC",
+             "NR1H3", "NR1H2", "NR1H4", "NR1H5P", "VDR", "NR1I2", "NR1I3")
+NR_RXR <- c("HNF4A", "HNF4G",
+             "RXRA", "RXRB", "RXRG", "NR2C1", "NR2C2", "NR2E1", "NR2E3", "NR2F1", "NR2F2", "NR2F6")
+NR_ER <- c("ESR1", "ESR2", "ESRRA", "ESRRB", "ESRRG", "NR3C1", "NR3C2", "PGR", "AR")
+NR_Misc <- c("NR4A2", "NR4A3", "NR5A1", "NR5A2", "NR6A1", "NR0B1", "NR0B2")
+
 NR <- c("THRA", "THRB", "RARA", "RARB", "RARG", "PPARA", "PPARD", "PPARG", "NR1D1", "NR1D2", "RORA", "RORB", "RORC",
              "NR1H3", "NR1H2", "NR1H4", "NR1H5P", "VDR", "NR1I2", "NR1I3", "HNF4A", "HNF4G",
              "RXRA", "RXRB", "RXRG", "NR2C1", "NR2C2", "NR2E1", "NR2E3", "NR2F1", "NR2F2", "NR2F6",
