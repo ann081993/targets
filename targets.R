@@ -13,9 +13,8 @@ NR <- c("THRA", "THRB", "RARA", "RARB", "RARG", "PPARA", "PPARD", "PPARG", "NR1D
              "RXRA", "RXRB", "RXRG", "NR2C1", "NR2C2", "NR2E1", "NR2E3", "NR2F1", "NR2F2", "NR2F6",
              "ESR1", "ESR2", "ESRRA", "ESRRB", "ESRRG", "NR3C1", "NR3C2", "PGR", "AR",
              "NR4A2", "NR4A3", "NR5A1", "NR5A2", "NR6A1", "NR0B1", "NR0B2")
-coreg <- c("ADIPOQ", "LCOR", 
-           "NCOR1", "NCOR2", "NCOA1", "NCOA2", "NCOA3", "PPARGC1A" , "NR0B1", "NR0B2", "KAT2A",
-           "MED1", "NRIP1", "NCOA6", "NCOA5", "NCOA4", "CREBBP", "EP300", "ZNHIT3", "TRIP4", "KIF11", "	JMJD1C")
+coreg <- c("LCOR", "NCOR1", "NCOR2", "NCOA1", "NCOA2", "NCOA3", "PPARGC1A" , "NR0B1", "NR0B2", "KAT2A",
+           "MED1", "NRIP1", "NCOA6", "NCOA5", "NCOA4", "CREBBP", "EP300", "ZNHIT3", "TRIP4", "KIF11", "JMJD1C")
 wat <- c("ADIPOQ", "FABP4", "PPARG", "GLUT4", "PLIN")
 bat <- c("UCP1", "DIO2", "PPARA", "PRDM16", "ADRB3", "VEGFA2")
 targets <- c(NR, coreg, wat, bat)
